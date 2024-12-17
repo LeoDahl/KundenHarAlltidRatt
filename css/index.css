@@ -1,14 +1,116 @@
 body {
     margin: 0;
+}
+
+#container1 {
     padding: 0;
     display: grid;
     grid-template-areas: 
     "hd hd"
     "mn mn"
-    "sp sp"
     "vo vo"
     "re re"
     "ft ft";
+}
+#container2 {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 
+    "hd hd"
+    "fo fo"
+    "ft ft";
+}
+#container3 {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+    grid-template-rows: 12vh 88vh;
+    grid-template-areas: 
+    "hd hd"
+    "si ma"
+    "si ma";
+    height: 100vh;
+}
+header {
+    grid-area: hd;
+}
+#container3 main {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(39, 248, 248);
+    grid-area: ma;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ProgramBox {
+    width: 90%;
+    height: 100%;
+    background-color: #ff0000;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0;
+    margin:0;
+
+}
+.ImageBox {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    background-size: cover;
+    grid-template-rows: 33% 20% 47%;
+    margin:0;
+    padding: 0;
+}
+
+#Top {
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/Top.png");
+    background-size:cover;
+    background-position: center;
+    border:none; 
+}
+#Middle {
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/Middle.png");
+    background-size: cover;
+    background-position:center;
+    border: none;
+}
+#Bottom {
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/Bottom.png");
+    background-size: cover;
+    background-position:center;
+    border: none;
+}
+
+
+aside {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    display: flex;
+    grid-area: si;
+    justify-content: center;
+    border-right: 5px solid red;
+
+}
+
+#container3 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 95%;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    border-bottom: 5px solid red;
+    grid-area: hd;
 }
 
 .navbar {
@@ -18,7 +120,7 @@ body {
     height: 12vh;
     background-color: rgb(255, 255, 255);
     color: white;
-    border-bottom: 4px red solid;
+    border-bottom: 5px solid red;
     grid-area: hd;
 }
 
@@ -39,6 +141,7 @@ body {
     width: 100%;
     background-color: rgb(255, 255, 255);
     display: flex;
+    grid-area: re;
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -92,7 +195,7 @@ body {
     border-radius: 20px;
     margin: 10px;
 }
-.profilecard img {
+.profilecard  {
     width: 80%;
     height: 50%;
     border: 2px solid black;
@@ -150,7 +253,7 @@ footer {
 .spacing {
     padding-right: 200px;
 }
-.main {
+main {
     width: 100%;
     height: 60vh;
     background-color: rgb(240, 58, 58);
@@ -169,6 +272,12 @@ footer {
     flex-direction: column;
     justify-content: center;
 
+}
+.maintext h1 {
+    font-size: 50px;
+}
+.maintext p {
+    font-size: 20px
 }
 
 @font-face {
@@ -216,4 +325,138 @@ h3 {
 .startnow:hover {
     background-color: rgb(124, 16, 16);
     cursor:pointer;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    border-bottom: 4px red solid;
+    grid-area: hd;
+    width: 100vw;
+}
+
+.logo img {
+    height: 100%;
+    width: 200px;
+}
+
+footer {
+    margin-top: 20px;
+    grid-area: ft;
+    width: 100%;
+    background-color: rgb(240, 58, 58);
+    height: 20vh;
+}
+
+.nav-center {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-buttons button {
+    color: rgb(255, 0, 0);
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 200px;
+    transition: 0.1s;
+}
+.nav-buttons button:hover {
+    margin: -6px;
+    font-size: 21px;
+    border-bottom: 3px solid rgb(255, 0, 0);
+}
+
+.spacing {
+    padding-right: 200px;
+}
+
+.forumCenter
+{
+    width: 95vw;
+    height: 100%;
+    background-color: rgb(255, 243, 243);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid rgba(251, 159, 159, 0.722);
+    border-radius: 10px;
+}
+
+.forum {
+    grid-area: fo;
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    
+    
+}
+
+.container {
+    margin-top: 1%;
+    width: 95%;
+    height: 320px;
+    background-color: rgb(255, 255, 255);
+    border: 6px solid rgba(244, 43, 43, 0.722);
+    border-radius: 15px;
+}
+
+.container img {
+    border: 3px solid rgb(255, 0, 0);
+    height: 85%;
+    margin: 5px;
+    border-radius: 10px;
+}
+.container p 
+{
+    height: 30%;
+    font-size: 10   0%;
+    margin:5px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+}
+.container button{
+    width: 150px;
+    height: 45px;
+    margin-left: 80%;
+    border: 3px solid rgb(255, 0, 0);
+    border-radius: 10px;
+    background-color: rgb(255, 126, 126);
+    font-size: 100%;
+
+}
+.containerHeader {
+    height: 40%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    
+}
+.containerHeader h2 {
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    height: 40%;
+    font-weight: bold;
+    font-size: 200%;
 }
